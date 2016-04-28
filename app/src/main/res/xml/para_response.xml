@@ -1,0 +1,83 @@
+﻿<xml>
+    <Response>
+        <Item>
+            <Title>Input Your Text...</Title>
+            <Text></Text>
+            <Customize>input</Customize>
+            <Image>picture108</Image>
+			<ImageV>picture108_v</ImageV>
+        </Item>
+        <Item>
+            <Title>Thank you very much</Title>
+            <Text>Thank you very much</Text>
+            <Titulo>Muchas gracias</Titulo>
+            <Texto>Muchas gracias</Texto>
+            <Image>picture109</Image>
+			<ImageV>picture109_v</ImageV>
+        </Item>
+        <Item>
+            <Title>I don't understand</Title>
+            <Text>I don't understand</Text>
+			<Titulo>No entiendo</Titulo>
+			<Texto>No entiendo</Texto>
+            <Image>picture110</Image>
+			<ImageV>picture110_v</ImageV>
+        </Item>
+        <Item>
+            <Title>Goodbye</Title>
+            <Text>Goodbye</Text>
+			<Titulo>Adiós</Titulo>
+			<Texto>Adiós</Texto>
+            <Image>picture177</Image>
+			<ImageV>picture177_v</ImageV>
+        </Item>
+        <Item>
+            <Title>Could you repeat that</Title>
+            <Text>Could you repeat that</Text>
+			<Titulo>Podría repetir</Titulo>
+			<Texto>Podría repetir</Texto>
+            <Image>picture113</Image>
+			<ImageV>picture113_v</ImageV>
+        </Item>
+		 <Item>
+            <Title>Could you talk slower</Title>
+            <Text>Could you talk slower</Text>
+			<Titulo>Podría repetir</Titulo>
+			<Texto>Podría repetir</Texto>
+            <Image>picture174</Image>
+			<ImageV>picture174_v</ImageV>
+        </Item>
+		<Item>
+            <Title>I don't know</Title>
+            <Text>I don't know</Text>
+			<Titulo>No lo sé</Titulo>
+			<Texto>No lo sé</Texto>
+            <Image>picture112</Image>
+			<ImageV>picture112_v</ImageV>
+        </Item>
+		<Item>
+            <Title>Could you talk louder</Title>
+            <Text>Could you talk louder</Text>
+			<Titulo>Podría hablar mas fuerte</Titulo>
+			<Texto>Podría hablar mas fuerte</Texto>
+            <Image>picture166</Image>
+			<ImageV>picture166_v</ImageV>
+        </Item>
+		<Item>
+            <Title>Can you help me ?</Title>
+            <Text>Can you help me ?</Text>
+			<Titulo>Podría ayudarme, por favor</Titulo>
+			<Texto>Podría ayudarme, por favor</Texto>
+            <Image>picture165</Image>
+			<ImageV>picture165_v</ImageV>
+        </Item>
+		<Item>
+            <Title>Will you please get in touch with my emergency contact?</Title>
+            <Text>Will you please get in touch with my emergency contact?</Text>
+			<Titulo>¿Podría por favor llamar a mi contacto de emergencia?</Titulo>
+			<Texto>¿Podría por favor llamar a mi contacto de emergencia?</Texto>
+            <Image>picture198</Image>
+			<ImageV>picture198_v</ImageV>
+        </Item>
+    </Response>
+</xml>

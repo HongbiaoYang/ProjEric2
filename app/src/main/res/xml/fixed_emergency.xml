@@ -1,0 +1,58 @@
+﻿<xml>
+<Emergency>
+		<Item>
+			<Title>I need help</Title>
+			<Text>I need help</Text>
+			<Titulo>Necesito ayuda</Titulo>
+			<Texto>Necesito ayuda</Texto>
+			<Image>picture48</Image>
+			<ImageV>picture48_v</ImageV>
+			<Color>#e7402e</Color>
+		</Item>
+		<Item> 
+			<Title>Another passenger in the bus needs help</Title>
+			<Text>Another passenger in the bus needs help</Text>
+			<Titulo>Un pasajero necesita ayuda</Titulo>
+			<Texto>Un pasajero necesita ayuda</Texto>
+			<Image>picture52</Image>
+			<ImageV>picture52_v</ImageV>
+			<Color>#e7402e</Color>
+		</Item>
+		<Item> 
+			<Title>Please call 911</Title>
+			<Text>Please call nine one one</Text>
+			<Titulo>Por favor llame al 911</Titulo>
+			<Texto>Por favor llame al 911</Texto>
+			<Image>picture51</Image>
+			<ImageV>picture51_v</ImageV>
+			<Color>#e7402e</Color>
+		</Item>
+		<Item> 
+			<Title>There has been a personal accident on the bus</Title>
+			<Text>There has been a personal accident on the bus</Text>
+			<Titulo>Hubo un accidente personal en el transporte</Titulo>
+			<Texto>Hubo un accidente personal en el transporte</Texto>
+			<Image>picture148</Image>
+			<ImageV>picture148_v</ImageV>
+			<Color>#e7402e</Color>
+		</Item>
+		<Item> 
+			<Title>There is an immediate danger on the bus</Title>
+			<Text>There is an immediate danger on the bus</Text>
+			<Titulo>Hay un peligro inmediato en el transporte</Titulo>
+			<Texto>Hay un peligro inmediato en el transporte</Texto>
+			<Image>picture149</Image>
+			<ImageV>picture149_v</ImageV>
+			<Color>#e7402e</Color>
+		</Item>
+		<Item> 
+			<Title>I feel scared</Title>
+			<Text>I feel scared</Text>
+			<Titulo>Me siento con miedo</Titulo>
+			<Texto>Me siento con miedo</Texto>
+			<Image>picture25</Image>
+			<ImageV>picture25_v</ImageV>
+			<Color>#e7402e</Color>
+		</Item>	
+</Emergency>
+</xml>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+                android:oneshot="false">
+    <item android:drawable="@drawable/swipe_gesture0" android:duration="1000" />
+    <item android:drawable="@drawable/swipe_gesture1" android:duration="100" />
+    <item android:drawable="@drawable/swipe_gesture2" android:duration="100" />
+    <item android:drawable="@drawable/swipe_gesture3" android:duration="100" />
+    <item android:drawable="@drawable/swipe_gesture4" android:duration="100" />
+    <item android:drawable="@drawable/swipe_gesture5" android:duration="100" />
+    <item android:drawable="@drawable/swipe_gesture6" android:duration="100" />
+    <item android:drawable="@drawable/swipe_gesture7" android:duration="100" />
+</animation-list>

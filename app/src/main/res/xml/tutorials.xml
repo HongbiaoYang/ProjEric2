@@ -1,0 +1,124 @@
+﻿<xml>
+    <Hearing>
+        <Item>
+            <Desc>Welcome to Hearing Tutorial. Please double tap on your selected point of transit.\nSwipe to continue.</Desc>
+            <Voice>Welcome to Hearing Tutorial. Please Double Tap on your selected point of transit. Swipe to continue. </Voice>
+            <Image>tutorial1_e</Image>
+            <Progress>progressbar1_e</Progress>
+        </Item>
+        <Item>
+            <Desc>Choose the type of information you need to ask driver by Double Tapping</Desc>
+            <Voice>Choose the type of information you need to ask driver by Double Tapping.</Voice>
+            <Image>tutorial2_e</Image>
+             <Progress>progressbar2_e</Progress>
+        </Item>
+   
+      
+		<Item>
+            <Desc>Double Tap on Back Button to go to previous screen. </Desc>
+            <Voice>Double Tap on Back Button to go to previous screen.</Voice>
+            <Image>tutorial3_e</Image>
+            <Progress>progressbar3_e</Progress>
+        </Item>
+		<Item>
+            <Desc>Double Tap on Home Button to go to Home screen.</Desc>
+            <Voice>Double Tap on Home Button to go to Home screen.</Voice>
+            <Image>tutorial4_e</Image>
+             <Progress>progressbar4_e</Progress>
+        </Item>
+		<Item>
+            <Desc>Double Tap on Yes or No Button to respond.</Desc>
+            <Voice>Double Tap on Yes or No Button to respond.</Voice>
+            <Image>tutorial5_e</Image>
+            <Progress>progressbar5_e</Progress>
+        </Item>
+		<Item>
+            <Desc>Double Tap on More Button to go to Response screen.</Desc>
+            <Voice>Double Tap on More Button to go to Response screen.</Voice>
+            <Image>tutorial6_e</Image>
+             <Progress>progressbar6_e</Progress>
+        </Item>
+		<Item>
+            <Desc>In the Response screen Double Tap on 'Input your Text' to open Text to Voice Box.</Desc>
+            <Voice>In the Response screen Double Tap on 'Input your Text' to open Text to Voice Box.</Voice>
+            <Image>tutorial7_e</Image>
+            <Progress>progressbar7_e</Progress>
+        </Item>
+		<Item>
+            <Desc>Use the on screen keyboard to type in your text.</Desc>
+            <Voice>Use the on screen keyboard to type in your text.</Voice>
+            <Image>tutorial8_e</Image>
+             <Progress>progressbar8_e</Progress>
+        </Item>
+		<Item>
+            <Desc>Press 'Done' on the On screen keyboard when you are finished typing.</Desc>
+            <Voice>Press 'Done' on the On screen keyboard when you are finished typing.</Voice>
+            <Image>tutorial9_e</Image>
+            <Progress>progressbar9_e</Progress>
+        </Item>
+		<Item>
+            <Desc>Use 'Speak' Button to speak your text.\n\nUse 'Save' Button to save your text\n\nUse 'Cancel' Button to cancel the box when your are done</Desc>
+            <Voice>Use Speak Button to speak your text
+			      Use Save Button to save your text
+				  Use Cancel Button to cancel the box when your are done</Voice>
+            <Image>tutorial10_e</Image>
+            <Progress>progressbar10_e</Progress>
+        </Item>
+		<Item>
+            <Desc>Scroll up and down and make your selection by Double Tapping. </Desc>
+            <Voice>Scroll up and down and make your selection by Double Tapping.</Voice>
+            <Image>tutorial11_e</Image>
+            <Progress>progressbar11_e</Progress>
+        </Item>
+    </Hearing>
+
+    <NonEnglish>
+        <Item>
+            <Desc>Bienvenido al Tutorial Auditivo. Por favor presione dos veces en su punto de transporte seleccionado.\nDeslizar para continuar</Desc>
+            <Voice>Welcome to Hearing Tutorial. Please Double Tap on your selected point of transit. Swipe to continue.</Voice>
+            <Image>tutorial1_s</Image>
+            <Progress>progressbar1_s</Progress>
+        </Item>
+        
+       
+        <Item>
+            <Desc>Desplace la pantalla hacia abajo y seleccione sus preguntas presionando dos veces.</Desc>
+            <Voice>Scroll up and down and make your selection by Double Tapping.</Voice>
+            <Image>tutorial2_s</Image>
+            <Progress>progressbar2_s</Progress>
+        </Item>
+		<Item>
+            <Desc>Presione dos veces en el botón de la flecha apuntando hacia la izquierda para regresar a la pantalla anterior.</Desc>
+            <Voice>Double Tap on Back Button to go to previous screen.</Voice>
+            <Image>tutorial3_s</Image>
+            <Progress>progressbar3_s</Progress>
+        </Item>
+		<Item>
+            <Desc>Presione dos veces en el botón de la casa para ir a la pantalla principal. </Desc>
+            <Voice>Double Tap on Home Button to go to Home screen.</Voice>
+            <Image>tutorial4_s</Image>
+            <Progress>progressbar4_s</Progress>
+        </Item>
+		<Item>
+            <Desc>Presione dos veces en el botón de “Sí” o “No” para responder.</Desc>
+            <Voice>Double Tap on Yes or No Button to respond</Voice>
+            <Image>tutorial5_s</Image>
+            <Progress>progressbar5_s</Progress>
+        </Item>
+		<Item>
+            <Desc>Presione dos veces en el botón de “Más” para ir a la pantalla de respuestas.</Desc>
+            <Voice>Double Tap on More Button to go to Response screen.</Voice>
+            <Image>tutorial6_s</Image>
+           <Progress>progressbar6_s</Progress>
+        </Item>
+		<Item>
+             <Desc>Desplace la pantalla y presione dos veces cualquier botón para responder.</Desc>
+            <Voice>Scroll up and down and make your selection by Double Tapping.</Voice>
+            <Image>tutorial7_s</Image>
+            <Progress>progressbar7_s</Progress>
+        </Item>
+    </NonEnglish>
+
+    
+
+</xml>

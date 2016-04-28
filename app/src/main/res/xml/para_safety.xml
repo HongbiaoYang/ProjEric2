@@ -1,0 +1,103 @@
+﻿<xml>
+<General>
+   <Item> 
+			<Title>Please do not use your cell phone while driving</Title>
+			<Text>Please do not use your cell phone while driving</Text>
+			<Titulo>Por favor no use su teléfono celular mientras conduce</Titulo>
+			<Texto>Por favor no use su teléfono celular mientras conduce</Texto>
+			<Image>picture57</Image>
+			<ImageV>picture57_v</ImageV>
+			<Color>#00B0ED</Color>
+		</Item>
+		<Item> 
+			<Title>Please go slower</Title>
+			<Text>Please go slower</Text>
+			<Titulo>Por favor vaya mas despacio</Titulo>
+			<Texto>Por favor vaya mas despacio</Texto>
+			<Image>picture58</Image>
+			<ImageV>picture58_v</ImageV>
+			<Color>#00B0ED</Color>
+		</Item>
+		<Item> 
+			<Title>Please do not smoke and come into the bus, I have health issues</Title>
+			<Text>Please do not smoke and come into the bus, I have health issues</Text>
+			<Titulo>Por favor no fume y regrese al transporte, tengo problemas de salud</Titulo>
+			<Texto>Por favor no fume y regrese al transporte, tengo problemas de salud</Texto>
+			<Image>picture60</Image>
+			<ImageV>picture60_v</ImageV>
+			<Color>#00B0ED</Color>
+		</Item>	
+		<Item> 
+			<Title>This is not a safe place for me to get on or off the bus</Title>
+			<Text>This is not a safe place for me to get on or off the bus</Text>
+			<Titulo>Este no es un lugar seguro para subirme al or bajarme del transporte</Titulo>
+			<Texto>Este no es un lugar seguro para subirme al or bajarme del transporte</Texto>
+			<Image>picture195</Image>
+			<ImageV>picture195_v</ImageV>
+			<Color>#00B0ED</Color>
+		</Item>			
+		<Item> 
+			<Title>The bus steps are slippery</Title>
+			<Text>The bus steps are slippery</Text>
+			<Titulo>Los escalones del transporte están resbalosos</Titulo>
+			<Texto>Los escalones del transporte están resbalosos</Texto>
+			<Image>picture130</Image>
+			<ImageV>picture130_v</ImageV>
+			<Color>#00B0ED</Color>
+		</Item>	
+		<Item> 
+			<Title>The bus floors are slippery</Title>
+			<Text>The bus floors are slippery</Text>
+			<Titulo>El piso del transporte está resbaloso</Titulo>
+			<Texto>El piso del transporte está resbaloso</Texto>
+			<Image>picture41</Image>
+			<ImageV>picture41_v</ImageV>
+			<Color>#00B0ED</Color>
+		</Item>	
+		<Item> 
+			<Title>These seats are wet</Title>
+			<Text>These seats are wet</Text>
+			<Titulo>El asiento está mojado</Titulo>
+			<Texto>El asiento está mojado</Texto>
+			<Image>picture117</Image>
+			<ImageV>picture117_v</ImageV>
+			<Color>#00B0ED</Color>
+		</Item>	
+		<Item> 
+			<Title>The bus is leaking</Title>
+			<Text>The bus is leaking</Text>
+			<Titulo>El transporte está goteando</Titulo>
+			<Texto>El transporte está goteando</Texto>
+			<Image>picture196</Image>
+			<ImageV>picture196_v</ImageV>
+			<Color>#00B0ED</Color>
+		</Item>	 
+		<Item> 
+			<Title>The seatbelt is not working</Title>
+			<Text>The seatbelt is not working</Text>
+			<Titulo>El cinturón no está funcionando</Titulo>
+			<Texto>El cinturón no está funcionando</Texto>
+			<Image>picture97</Image>
+			<ImageV>picture97_v</ImageV>
+			<Color>#00B0ED</Color>
+		</Item>
+		<Item> 
+			<Title>The tie-downs are not working</Title>
+			<Text>The tie-downs are not working</Text>
+			<Titulo>El ajuste no está funcionando</Titulo>
+			<Texto>El ajuste no está funcionando</Texto>
+			<Image>picture116</Image>
+			<ImageV>picture116_v</ImageV>
+			<Color>#00B0ED</Color>
+		</Item>
+		<Item> 
+			<Title>My shoulder harness and lap belt are not secure</Title>
+			<Text>My shoulder harness and lap belt are not secure</Text>
+			<Titulo>Mis cinturones de seguridad no están bien abrochados</Titulo>
+			<Texto>Mis cinturones de seguridad no están bien abrochados</Texto>
+			<Image>picture197</Image>
+			<ImageV>picture197_v</ImageV>
+			<Color>#00B0ED</Color>
+		</Item>
+    </General>
+</xml>

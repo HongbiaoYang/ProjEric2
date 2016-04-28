@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+              android:id="@+id/head_banner"
+              android:layout_width="fill_parent"
+              android:layout_height="50dp"
+              android:layout_alignParentTop="true"
+              android:layout_alignParentLeft="true"
+              android:layout_alignParentRight="true"
+              android:gravity="top"
+              android:background="@drawable/btn_yellow">
+
+    <ImageView
+            android:id="@id/header1"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/goback"/>
+
+    <TextView
+            android:id="@id/header2"
+            android:layout_width="0dp"
+            android:layout_weight="5"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="2dp"
+            style="@style/ButtonText_Black_16"
+            android:gravity="center"/>
+
+    <ImageView
+               android:layout_width="0dp"
+               android:layout_weight="1"
+               android:layout_height="fill_parent"
+                android:id="@+id/frame_image"/>
+
+    <ImageView
+            android:id="@id/header3"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="fill_parent"
+
+            android:background="@drawable/home"/>
+
+
+</LinearLayout>

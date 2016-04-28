@@ -1,0 +1,130 @@
+﻿<xml>
+    <General>
+    <Item>
+			<Title>What is your name ?</Title>
+			<Text>What is your name ?</Text>
+            <Titulo>¿Cuál es su nombre?</Titulo>
+            <Texto>¿Cuál es su nombre?</Texto>
+            <Image>picture13</Image>
+			<ImageV>picture13_v</ImageV>
+            <Color>#fdbd35</Color>
+		</Item>
+		<Item>
+			<Title>Hello, How are you?</Title>
+			<Text>Hello, How are you?</Text>
+			<Titulo>¡Hola! ¿Cómo está?</Titulo>
+            <Texto>¡Hola! ¿Cómo está?</Texto>
+			<Image>picture107</Image>
+			<ImageV>picture107_v</ImageV>
+			<Color>#fdbd35</Color>
+		</Item>
+		<Item>
+			<Title>I don’t feel good today</Title>
+			<Text>I don’t feel good today</Text>
+			<Titulo>No me siento bien hoy</Titulo>
+            <Texto>No me siento bien hoy</Texto>
+			<Image>picture179</Image>
+			<ImageV>picture179_v</ImageV>
+			<Color>#fdbd35</Color>
+		</Item>
+		<Item> 
+			<Title>Can you lower the lift for me?</Title>
+			<Text>Can you lower the lift for me?</Text>
+			<Titulo>¿Puede bajar el elevador por mí?</Titulo>
+			<Texto>¿Puede bajar el elevador por mí?</Texto>	
+			<Image>picture35</Image>
+			<ImageV>picture35_v</ImageV>
+			<Color>#fdbd35</Color>
+		</Item>	
+		<Item> 
+			<Title>Can you help me board the bus?</Title>
+			<Text>Can you help me board the bus?</Text>
+			<Titulo>¿Me puede ayudar a subir al transporte?</Titulo>
+			<Texto>¿Me puede ayudar a subir al transporte?</Texto>	
+			<Image>picture181</Image>
+			<ImageV>picture181_v</ImageV>
+			<Color>#fdbd35</Color>
+		</Item>			
+		<Item> 
+			<Title>How much does it cost to ride?</Title>
+			<Text>How much does it cost to ride?</Text>
+			<Titulo>¿Cuánto cuesta el pasaje?</Titulo>
+			<Texto>¿Cuánto cuesta el pasaje?</Texto>
+			<Image>picture183</Image>
+			<ImageV>picture183_v</ImageV>
+			<Color>#fdbd35</Color>
+		</Item>		
+		<Item> 
+			<Title>How do I buy a ticket or pay my fare?</Title>
+			<Text>How do I buy a ticket or pay my fare?</Text>
+			<Titulo>¿Cómo compro un pasaje o pago la tarifa?</Titulo>
+			<Texto>¿Cómo compro un pasaje o pago la tarifa?</Texto>
+			<Image>picture184</Image>
+			<ImageV>picture184_v</ImageV>
+			<Color>#fdbd35</Color>
+		</Item>
+		<Item> 
+			<Title>Can you help me use the ticket machine?</Title>
+			<Text>Can you help me use the ticket machine?</Text>
+			<Titulo>¿Me puede ayudar a usar la máquina de boletos?</Titulo>
+			<Texto>¿Me puede ayudar a usar la máquina de boletos?</Texto>
+			<Image>picture185</Image>
+			<ImageV>picture185_v</ImageV>
+			<Color>#fdbd35</Color>
+		</Item>
+		<Item> 
+			<Title>I don’t have money today</Title>
+			<Text>I don’t have money today</Text>
+			<Titulo>Hoy no traigo dinero</Titulo>
+			<Texto>Hoy no traigo dinero</Texto>
+			<Image>picture186</Image>
+			<ImageV>picture186_v</ImageV>
+			<Color>#fdbd35</Color>
+		</Item>
+		<Item> 
+			<Title>I am not sure which bus I need.Can you please help me?</Title>
+			<Text>I am not sure which bus I need.Can you please help me?</Text>
+			<Titulo>No estoy seguro cuál ruta necesito, ¿me podría ayudar?</Titulo>
+			<Texto>No estoy seguro cuál ruta necesito, ¿me podría ayudar?</Texto>
+			<Image>picture187</Image>
+			<ImageV>picture187_v</ImageV>
+			<Color>#fdbd35</Color>
+		</Item>
+		<Item> 
+			<Title>Where is the STOP pull chord or button?</Title>
+			<Text>Where is the STOP pull chord or button?</Text>
+			<Titulo>¿Dónde se encuentra el cordón o botón para hacer la parada?</Titulo>
+			<Texto>¿Dónde se encuentra el cordón o botón para hacer la parada?</Texto>
+			<Image>picture80</Image>
+			<ImageV>picture80_v</ImageV>
+			<Color>#8661a6</Color>
+		</Item>
+		<Item> 
+			<Title>Are we close to my house or stop?</Title>
+			<Text>Are we close to my house or stop?</Text>
+			<Titulo>¿Estamos cerca de mi casa/bajada?</Titulo>
+			<Texto>¿Estamos cerca de mi casa/bajada?</Texto>
+			<Image>picture193</Image>
+			<ImageV>picture193_v</ImageV>
+			<Color>#8661a6</Color>
+		</Item>
+		<Item> 
+			<Title>This is not the stop where I want to get off</Title>
+			<Text>This is not the stop where I want to get off</Text>
+			<Titulo>Esta no es la parada en la que yo quiero bajar</Titulo>
+			<Texto>Esta no es la parada en la que yo quiero bajar</Texto>
+			<Image>picture98</Image>
+			<ImageV>picture98_v</ImageV>
+			<Color>#8661a6</Color>
+		</Item>
+		<Item> 
+			<Title>When will we arrive at the next stop?</Title>
+			<Text>When will we arrive at the next stop?</Text>
+			<Titulo>¿Qué tan lejos estamos de la parada?</Titulo>
+			<Texto>¿Qué tan lejos estamos de la parada?</Texto>
+			<Image>picture99</Image>
+			<ImageV>picture99_v</ImageV>
+			<Color> #8661a6</Color>
+		</Item>
+    </General>
+</xml>

@@ -1,0 +1,103 @@
+﻿<xml>
+<General>
+        <Item> 
+			<Title>I am going home</Title>
+			<Text>I am going home</Text>
+			<Titulo>Voy a casa</Titulo>
+			<Texto>Voy a casa</Texto>
+			<Image>picture44</Image>
+			<ImageV>picture44_v</ImageV>
+			<Color>#4ea554</Color>
+		</Item>	
+		<Item> 
+			<Title>I am going to Work</Title>
+			<Text>I am going to Work</Text>
+			<Titulo>Voy al trabajo</Titulo>
+			<Texto>Voy al trabajo</Texto>
+			<Image>picture42</Image>
+			<ImageV>picture42_v</ImageV>
+			<Color>#4ea554</Color>
+		</Item>	
+		<Item> 
+			<Title>I am going to a medical appointment</Title>
+			<Text>I am going to a medical appointment</Text>
+			<Titulo>Voy a una cita médica</Titulo>
+			<Texto>Voy a una cita médica</Texto>
+			<Image>picture188</Image>
+			<ImageV>picture188_v</ImageV>
+			<Color>#4ea554</Color>
+		</Item>	
+		<Item> 
+			<Title>I am going shopping</Title>
+			<Text>I am going shopping</Text>
+			<Titulo>Voy de compras</Titulo>
+			<Texto>Voy de compras</Texto>
+			<Image>picture189</Image>
+			<ImageV>picture189_v</ImageV>
+			<Color>#4ea554</Color>
+		</Item>		
+		<Item> 
+			<Title>Can you get the driver for me?</Title>
+			<Text>Can you get the driver for me?</Text>
+			<Titulo>¿Puede llamar al conductor por mí?</Titulo>
+			<Texto>¿Puede llamar al conductor por mí?</Texto>
+			<Image>picture15</Image>
+			<ImageV>picture15_v</ImageV>
+			<Color>#4ea554</Color>
+		</Item>	
+		<Item> 
+			<Title>Could you please help me?</Title>
+			<Text>Could you please help me?</Text>
+			<Titulo>¿Me podría ayudar por favor?</Titulo>
+			<Texto>¿Me podría ayudar por favor?</Texto>
+			<Image>picture94</Image>
+			<ImageV>picture94_v</ImageV>
+			<Color>#4ea554</Color>
+		</Item>	
+		<Item> 
+			<Title>I am afraid of dogs</Title>
+			<Text>I am afraid of dogs</Text>
+			<Titulo>Le tengo miedo a los perros</Titulo>
+			<Texto>Le tengo miedo a los perros</Texto>
+			<Image>picture89</Image>
+			<ImageV>picture89_v</ImageV>
+			<Color>#4ea554</Color>
+		</Item>
+		<Item> 
+			<Title>I am allergic to smells</Title>
+			<Text>I am allergic to smells</Text>
+			<Titulo>Soy alérgico a los aromas</Titulo>
+			<Texto>Soy alérgico a los aromas</Texto>
+			<Image>picture90</Image>
+			<ImageV>picture90_v</ImageV>
+			<Color>#4ea554</Color>
+		</Item>
+		<Item> 
+			<Title>Please adjust the heater or airconditioner</Title>
+			<Text>Please adjust the heater/airconditioner</Text>
+			<Titulo>¿Por favor podría ajustar el aire acondicionado</Titulo>
+			<Texto>¿Por favor podría ajustar el aire acondicionado</Texto>
+			<Image>picture190</Image>
+			<ImageV>picture190_v</ImageV>
+			<Color>#4ea554</Color>
+		</Item>
+		<Item> 
+			<Title>Please adjust the music</Title>
+			<Text>Please adjust the music</Text>
+			<Titulo>¿Por favor podría ajustar la música?</Titulo>
+			<Texto>¿Por favor podría ajustar la música?</Texto>
+			<Image>picture191</Image>
+			<ImageV>picture191_v</ImageV>
+			<Color>#4ea554</Color>
+		</Item>
+		<Item> 
+			<Title>I need to go to bathroom</Title>
+			<Text>I need to go to bathroom</Text>
+			<Titulo>Necesito ir al baño</Titulo>
+            <Texto>Necesito ir al baño</Texto>
+			<Image>picture54</Image>
+			<ImageV>picture54_v</ImageV>
+			<Color>#4ea554</Color>
+		</Item>	
+    </General>
+</xml>

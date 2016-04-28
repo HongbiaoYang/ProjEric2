@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:orientation="vertical"
+              android:id="@+id/cognitiveTutorial">
+
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.02"
+            android:layout_gravity="center_horizontal"
+            android:background="#000000">
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="fill_parent"
+                  android:layout_height="0dp"
+                  android:orientation="horizontal"
+                  android:layout_weight="8">
+        <LinearLayout android:layout_width="0dp"
+                      android:layout_weight="2"
+                      android:layout_height="fill_parent">
+            <TextView android:layout_width="fill_parent"
+                      android:layout_height="fill_parent"
+                      android:id="@+id/description"
+                      android:text="description text"      />
+
+
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="0dp"
+                      android:layout_weight="8"
+                      android:orientation="vertical"
+                      android:layout_height="fill_parent">
+
+
+            <LinearLayout android:layout_width="fill_parent"
+                          android:layout_weight="9"
+                          android:layout_height="0dp">
+                <ImageView android:layout_width="fill_parent"
+                           android:layout_height="fill_parent"
+                           android:id="@+id/screenshot"
+                        />
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="fill_parent"
+                          android:layout_height="0dp"
+                          android:orientation="horizontal"
+                          android:layout_weight="1.5">
+                <ImageView android:layout_width="0dp"
+                           android:layout_weight="8"
+                           android:id="@+id/progress"
+                           android:layout_height="fill_parent"/>
+                <Button android:layout_width="0dp"
+                        android:layout_weight="4"
+                        android:layout_height="fill_parent"
+                        android:id="@+id/next"
+                        android:background="@drawable/btn_yellow"
+                        android:text="NEXT"/>
+                <Button android:layout_width="0dp"
+                        android:layout_weight="4"
+                        android:layout_height="fill_parent"
+                        android:id="@+id/skip"
+                        android:background="@drawable/btn_yellow"
+                        android:text="SKIP"/>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>
+

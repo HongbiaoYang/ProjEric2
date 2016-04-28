@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TTSProj2</string>
+    <string name="header">Project Eric</string>
+    <string name="aList">ActionList</string>
+    <string name="empty"/>
+    <string name="footer">Footer Goes Here</string>
+    <string name="emergencyText">Emergency</string>
+    <string name="selectText">Select the DISABILITY need</string><string name="yes">Yes</string><string name="no">No</string><string name="more">More...</string><string name="goback">Go Back</string><string name="more1">Could you repeat</string><string name="more2">I am not sure</string><string name="more3">I don\'t understand</string><string name="more4">Thank you very much</string><string name="more5">I don\'t care</string>
+    <string name="welcomeTutorial">Welcome to Vision Tutorial</string>
+    <string name="startTutorial">Swipe Up to Start the Tutorial</string>
+    <string name="skipTutorial">Swipe Down to Quit the Tutorial</string>
+    <string name="tapStartTutorial">Hold this button to Start the Tutorial</string>
+    <string name="tapSkipTutorial">Hold this button to Skip the Tutorial</string>
+    <string name="SpeedText">Talking Speed(0.5)</string>
+    <string name="cogWel">Welcome To Tutorial</string>
+    <string name="facebook_app_id">1051479971583650</string>
+    <string name="cogInstruct">This tutorial will guide you to Navigate and Access the Content of this Application, At any point of tutorial use skip button at buttom to skip through the tutorial. Double Tap on "Start Button" to begin the tutorial</string>
+    <string name="cogHint">Welcome to cognitive mode, scroll up and down for more selection. Make your selections by pressing and holding on the button</string>
+    <string name="noleftc">There are no more categories beyond  this point, please swipe right to access the previous category</string>
+    <string name="norightc">There are no more categories beyond  this point, please swipe left to access the next category</string>
+    <string name="noleftq">There are no more questions beyond  this point, please swipe right to access the previous questions</string>
+    <string name="norightq">There are no more questions beyond  this point, please swipe left to access the next questions</string>
+    <string name="nodown">There are no more questions beyond  this point, please swipe up to access questions</string>
+    <string name="noup">There are no more categories beyond  this point, please swipe down to access categories</string>
+    <string name="welcomeTutorialCognitive">Welcome to cognitive tutorial</string>
+    <string name="startTutorialCognitive">Please double tap the button to begin or skip the tutorial</string>
+    <string name="para">Para Transit</string>
+    <string name="welcomeSpeed">Hello, welcome to project eric</string>
+
+
+</resources>
