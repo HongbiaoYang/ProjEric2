@@ -27,6 +27,11 @@
     <string name="startTutorialCognitive">Please double tap the button to begin or skip the tutorial</string>
     <string name="para">Para Transit</string>
     <string name="welcomeSpeed">Hello, welcome to project eric</string>
+    <string name="fbLogin">Facebook Login</string>
+    <string name="ggLogin">Google Login</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="disconnect">Disconnect</string>
+    <string name="loading">Loading...</string>
 
 
 </resources>

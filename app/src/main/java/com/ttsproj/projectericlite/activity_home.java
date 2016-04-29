@@ -22,6 +22,8 @@ import java.util.Calendar;
 import java.util.List;
 import com.facebook.FacebookSdk;
 import com.facebook.appevents.AppEventsLogger;
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 
 /**
  * Created by Bill on 11/5/2015.
@@ -45,7 +47,6 @@ public class activity_home extends Activity implements TextToSpeech.OnInitListen
         // facebook stuff
         FacebookSdk.sdkInitialize(getApplicationContext());
         AppEventsLogger.activateApp(this);
-        
 
         MyProperties.getInstance().gtts = new TextToSpeech(getApplicationContext(), this);
 
@@ -64,7 +65,7 @@ public class activity_home extends Activity implements TextToSpeech.OnInitListen
         setting.setVisibility(View.VISIBLE);
 
         // go to setting page
-        Log.d(TAG, "get setting button 28");
+        Log.d(TAG, "get setting button 34");
         setting.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

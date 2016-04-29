@@ -28,4 +28,8 @@ dependencies {
     compile 'com.android.support:design:23.3.0'
 	compile 'com.facebook.android:facebook-android-sdk:4.+'
     compile 'com.readystatesoftware.sqliteasset:sqliteassethelper:+'
+    compile 'com.google.android.gms:play-services-auth:8.4.0'
+
 }
+
+apply plugin: 'com.google.gms.google-services'
