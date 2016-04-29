@@ -15,6 +15,8 @@ import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
 import com.facebook.FacebookSdk;
+import com.facebook.GraphRequest;
+import com.facebook.GraphResponse;
 import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
 import com.google.android.gms.auth.api.Auth;
@@ -27,6 +29,18 @@ import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.common.api.OptionalPendingResult;
 import com.google.android.gms.common.api.ResultCallback;
 import com.google.android.gms.common.api.Status;
+import com.mongodb.BasicDBObject;
+import com.mongodb.DB;
+import com.mongodb.DBObject;
+import com.mongodb.MongoClient;
+import com.mongodb.MongoClientURI;
+import com.mongodb.client.MongoCollection;
+import com.mongodb.client.MongoDatabase;
+import com.mongodb.util.JSON;
+
+import org.bson.Document;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 /**
  * Created by Bill on 4/27/2016.
@@ -47,6 +61,10 @@ public class activity_setting extends FragmentActivity implements GoogleApiClien
     private Button ggSignOut;
     private GoogleApiClient mGoogleApiClient;
     private ProgressDialog mProgressDialog;
+    private String server = "mydesk.desktops.utk.edu";
+    private String port = "3009";
+    private String collection = "eric";
+    private  String dbName = "mongo-server";
 
 
     @Override
@@ -73,12 +91,32 @@ public class activity_setting extends FragmentActivity implements GoogleApiClien
 
         callbackManager = CallbackManager.Factory.create();
 
-        Log.d(TAG, "fb created");
-
         fbLogin.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
             @Override
             public void onSuccess(LoginResult loginResult) {
                 Log.d(TAG, "fb success");
+                GraphRequest request = GraphRequest.newMeRequest(loginResult.getAccessToken(),
+                        new GraphRequest.GraphJSONObjectCallback() {
+                            @Override
+                            public void onCompleted(JSONObject object, GraphResponse response) {
+                                Log.d(TAG, response.toString());
+
+                                // application code
+                                try {
+                                    String email =  object.getString("email");
+                                    String name = object.getString("name");
+                                    sendDataToServer(name, email, "Facebook");
+
+                                } catch (JSONException e) {
+                                    Log.d(TAG, "data read err:"+e.toString());
+                                }
+                            }
+                        });
+                Bundle parameters = new Bundle();
+                parameters.putString("fields", "email,name");
+                request.setParameters(parameters);
+                request.executeAsync();
+
             }
 
             @Override
@@ -176,7 +214,6 @@ public class activity_setting extends FragmentActivity implements GoogleApiClien
             public void onStopTrackingTouch(SeekBar seekBar) {
 
                 // change setting and speak out welcome phase after release
-                Log.d(TAG, "slide end="+speed);
                 MyProperties.getInstance().gtts.setSpeechRate(speed*2.0f);
                 MyProperties.getInstance().speakout(getResources().getString(R.string.welcomeSpeed));
             }
@@ -245,11 +282,41 @@ public class activity_setting extends FragmentActivity implements GoogleApiClien
         Log.d(TAG, "handleSignInResult:" + result.isSuccess());
         if (result.isSuccess()) {
             GoogleSignInAccount acct = result.getSignInAccount();
-            Log.d(TAG, "gg loged:"+acct.getDisplayName() + " email:"+acct.getEmail());
             updateUI(true);
+
+            // send data to server with mongodb
+            sendDataToServer(acct.getDisplayName(), acct.getEmail(), "Google");
         } else {
             updateUI(false);
         }
+
+    }
+
+    // send login data to monggodb database
+    private void sendDataToServer(String name, String email, String platform) {
+        Log.d(TAG, "json data:"+name + " email:"+email + " platform:"+platform);
+
+       /* String dbURI = String.format("mongodb://%s:%s/%s", server, port, dbName);
+
+        MongoClientURI uri = new MongoClientURI(dbURI);
+        MongoClient mongoClient = new MongoClient(uri);
+
+        MongoDatabase db = mongoClient.getDatabase(uri.getDatabase());
+        MongoCollection collection =  db.getCollection("eric");
+
+
+   *//*     BasicDBObject document = new BasicDBObject();
+        document.put("name", name);
+        document.put("email", email);
+        document.put("platform", platform);
+        document.put("os","Android");*//*
+        Document document = new Document("name", name)
+                 .append("email", email)
+                 .append("platform", platform)
+                 .append("os","Android");
+
+
+        collection.insertOne(document);*/
 
     }
 
