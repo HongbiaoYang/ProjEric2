@@ -7,9 +7,13 @@
     <include layout="@layout/head_home"  android:id="@+id/home_header"/>
 
 
-    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="0dp"
-        android:layout_weight="0.02" android:layout_gravity="center_horizontal" android:background="#000000"
-        android:id="@+id/linearLayout"/>
+    <LinearLayout android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.02"
+                    android:layout_gravity="center_horizontal"
+                    android:background="#000000"
+                    android:id="@+id/linearLayout"/>
 
 
     <LinearLayout
@@ -79,7 +83,7 @@
 
 <com.ttsproj.projectericlite.footer_view android:layout_width="fill_parent"
                                  android:layout_height="0dp"
-                                 android:layout_weight="1.3">
+                                 android:layout_weight="0.5">
 </com.ttsproj.projectericlite.footer_view>
 
 

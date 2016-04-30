@@ -6,7 +6,7 @@
 
     <com.ttsproj.projectericlite.header_view android:layout_width="fill_parent"
                                      android:layout_height="0dp"
-                                     android:layout_weight="1.3"/>
+                                     android:layout_weight="0.5"/>
 
     <LinearLayout android:orientation="horizontal"
                   android:layout_width="fill_parent"

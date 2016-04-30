@@ -11,12 +11,28 @@ android {
         versionCode 1
         versionName "1.0"
         multiDexEnabled true
-
     }
+
+    signingConfigs {
+        release {
+            storeFile file("my-release-key.keystore")
+            storePassword "5221687app"
+            keyAlias "project_eric_lite"
+            keyPassword "5221687app"
+        }
+    }
+
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+        debug {
+            debuggable true
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt')
+            signingConfig signingConfigs.release
         }
     }
 }
@@ -24,12 +40,12 @@ android {
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     testCompile 'junit:junit:4.12'
+    compile files('libs/mongo-java-driver-3.2.0-SNAPSHOT.jar')
     compile 'com.android.support:appcompat-v7:23.3.0'
     compile 'com.android.support:design:23.3.0'
     compile 'com.facebook.android:facebook-android-sdk:4.+'
     compile 'com.readystatesoftware.sqliteasset:sqliteassethelper:+'
     compile 'com.google.android.gms:play-services-auth:8.4.0'
-    compile files('libs/mongo-java-driver-3.2.0-SNAPSHOT.jar')
 }
 
 apply plugin: 'com.google.gms.google-services'

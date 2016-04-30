@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.FragmentActivity;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.*;
@@ -167,6 +166,7 @@ public class activity_setting extends FragmentActivity implements GoogleApiClien
                         new ResultCallback<Status>() {
                             @Override
                             public void onResult(@NonNull Status status) {
+                                MyProperties.getInstance().updateGGLoginStatus(false);
                                 updateUI(false);
                                 Log.d(TAG, "gg logout");
                             }
@@ -175,6 +175,14 @@ public class activity_setting extends FragmentActivity implements GoogleApiClien
             }
         });
         // [End of logout google]
+
+        // decide to show google login or google logout button
+        if (MyProperties.getInstance().isGGLogged()) {
+            updateUI(true);
+        } else {
+            updateUI(false);
+        }
+
 
         // override and set listen for go back button
         GoBack.setBackgroundResource(R.drawable.gobacklong);
@@ -221,7 +229,7 @@ public class activity_setting extends FragmentActivity implements GoogleApiClien
 
     }
 
-    @Override
+   /* @Override
     protected void onStart() {
         super.onStart();
         OptionalPendingResult<GoogleSignInResult> opr = Auth.GoogleSignInApi.silentSignIn(mGoogleApiClient);
@@ -264,6 +272,7 @@ public class activity_setting extends FragmentActivity implements GoogleApiClien
 
         mProgressDialog.show();
     }
+    */
 
     // on activity result for both facebook click and google click
     @Override
@@ -280,7 +289,7 @@ public class activity_setting extends FragmentActivity implements GoogleApiClien
 
     private void handleSignInResult(GoogleSignInResult result) {
         Log.d(TAG, "handleSignInResult:" + result.isSuccess());
-        if (result.isSuccess()) {
+       /* if (result.isSuccess()) {
             GoogleSignInAccount acct = result.getSignInAccount();
             updateUI(true);
 
@@ -288,7 +297,15 @@ public class activity_setting extends FragmentActivity implements GoogleApiClien
             sendDataToServer(acct.getDisplayName(), acct.getEmail(), "Google");
         } else {
             updateUI(false);
-        }
+        }*/
+
+        GoogleSignInAccount acct = result.getSignInAccount();
+        updateUI(true);
+
+        // send data to server with mongodb
+        sendDataToServer(acct.getDisplayName(), acct.getEmail(), "Google");
+        MyProperties.getInstance().updateGGLoginStatus(true);
+
 
     }
 

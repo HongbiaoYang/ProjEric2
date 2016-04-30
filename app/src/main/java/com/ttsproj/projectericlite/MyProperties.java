@@ -16,6 +16,7 @@ import java.util.*;
  * Created by Bill on 8/28/14.
  */
 public class MyProperties {
+    private static final String TAG = "MyProperties";
     private static MyProperties ourInstance = new MyProperties();
 
     public LANG Language;
@@ -38,6 +39,8 @@ public class MyProperties {
     public boolean nonenglish_updated = false;
     public int transitType = CONSTANT.PARA;
     public AnimationDrawable currentAnim;
+    private boolean GGlogin;
+    private boolean FBLogin;
 
     // shut up
     public void shutup() {
@@ -164,6 +167,9 @@ public class MyProperties {
         titleStack = new Stack<String>();
 //        animStack = new Stack<AnimationDrawable>();
         currentAnim = null;
+
+        GGlogin = false;
+        FBLogin = false;
 
         initTITLES();
     }
@@ -341,5 +347,43 @@ public class MyProperties {
 
         }
 
+    }
+
+    public boolean isFBLogged() {
+        if (FBLogin) {
+            return true;
+        } else {
+            FBLogin = readLoginStatusFromDB("FBLogin");
+            return FBLogin;
+        }
+    }
+
+    public boolean isGGLogged() {
+        if (GGlogin) {
+            return true;
+        } else {
+            GGlogin = readLoginStatusFromDB("GGLogin");
+            return GGlogin;
+        }
+    }
+
+    // read login status or insert a default value if non exist
+    private boolean readLoginStatusFromDB(String loginType) {
+        String status =  database.getProp(loginType);
+        Log.d(TAG, "status="+status);
+
+        // if empty, insert 'false'; else, read from database. update ggLogin
+        if (status == null) {
+            database.addProp(loginType, "false");
+            return false;
+        } else {
+            return Boolean.parseBoolean(status);
+        }
+
+    }
+
+    public void updateGGLoginStatus(boolean status) {
+        GGlogin = status;
+        database.updateProp("GGLogin", Boolean.toString(status));
     }
 }

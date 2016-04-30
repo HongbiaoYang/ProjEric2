@@ -9,7 +9,7 @@
 
 
     <application
-            android:icon="@drawable/icon_name" android:label="Project Eric Lite">
+            android:icon="@drawable/bushelpericon2" android:label="Project Eric Lite">
         <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
 
 
