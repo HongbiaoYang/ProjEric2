@@ -3,7 +3,9 @@ package com.ttsproj.projectericlite;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Looper;
 import android.support.annotation.NonNull;
 import android.support.v4.app.FragmentActivity;
 import android.util.Log;
@@ -37,9 +39,22 @@ import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 import com.mongodb.util.JSON;
 
+import org.apache.http.entity.InputStreamEntityHC4;
+import org.apache.http.impl.client.HttpClients;
 import org.bson.Document;
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.io.Writer;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
 
 /**
  * Created by Bill on 4/27/2016.
@@ -313,27 +328,22 @@ public class activity_setting extends FragmentActivity implements GoogleApiClien
     private void sendDataToServer(String name, String email, String platform) {
         Log.d(TAG, "json data:"+name + " email:"+email + " platform:"+platform);
 
-       /* String dbURI = String.format("mongodb://%s:%s/%s", server, port, dbName);
-
-        MongoClientURI uri = new MongoClientURI(dbURI);
-        MongoClient mongoClient = new MongoClient(uri);
-
-        MongoDatabase db = mongoClient.getDatabase(uri.getDatabase());
-        MongoCollection collection =  db.getCollection("eric");
-
-
-   *//*     BasicDBObject document = new BasicDBObject();
-        document.put("name", name);
-        document.put("email", email);
-        document.put("platform", platform);
-        document.put("os","Android");*//*
-        Document document = new Document("name", name)
-                 .append("email", email)
-                 .append("platform", platform)
-                 .append("os","Android");
+        JSONObject postJson = new JSONObject();
+        try {
+            postJson.put("email", email);
+            postJson.put("os", "Android");
+            postJson.put("name", name);
+            postJson.put("platform", platform);
 
 
-        collection.insertOne(document);*/
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        if (postJson.length() > 0) {
+            new SendJsonDataToServer().execute(String.valueOf(postJson));
+        }
+
 
     }
 
@@ -355,5 +365,73 @@ public class activity_setting extends FragmentActivity implements GoogleApiClien
     @Override
     public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
 
+    }
+
+
+    private class SendJsonDataToServer extends AsyncTask<String, String, String> {
+        @Override
+        protected String doInBackground(String... params) {
+            String JsonResponse = null;
+            String JsonData = params[0];
+
+            HttpURLConnection urlConnection = null;
+            BufferedReader reader = null;
+
+            try {
+                URL url = new URL("http://mydesk.desktops.utk.edu:3009/eric");
+                urlConnection = (HttpURLConnection) url.openConnection();
+                urlConnection.setDoOutput(true);
+
+                urlConnection.setRequestMethod("POST");
+                urlConnection.setRequestProperty("Content-Type", "application/json");
+                urlConnection.setRequestProperty("Accept","application/json");
+
+                Writer writer = new BufferedWriter(new OutputStreamWriter(urlConnection.getOutputStream(), "UTF-8"));
+                writer.write(JsonData);
+                writer.close();
+
+                InputStream inputStream = urlConnection.getInputStream();
+
+                StringBuffer buffer = new StringBuffer();
+
+                if (inputStream == null) {
+                    return null;
+                }
+
+                reader = new BufferedReader(new InputStreamReader(inputStream));
+                String inputLine;
+                while ((inputLine = reader.readLine()) != null) {
+                    buffer.append(inputLine + "\n");
+                    if (buffer.length() == 0)
+                        return null;
+                }
+
+                JsonResponse = buffer.toString();
+                Log.d(TAG, JsonResponse);
+                return  JsonResponse;
+
+            } catch (MalformedURLException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            } finally {
+                if (urlConnection != null)
+                    urlConnection.disconnect();
+                if (reader != null)
+                    try {
+                        reader.close();
+                    } catch (IOException e) {
+                        Log.e(TAG, "Error closing reader", e);
+                        e.printStackTrace();
+                    }
+            }
+
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(String s) {
+            super.onPostExecute(s);
+        }
     }
 }

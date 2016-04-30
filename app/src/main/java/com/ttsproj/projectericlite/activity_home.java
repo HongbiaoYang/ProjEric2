@@ -37,7 +37,12 @@ public class activity_home extends Activity implements TextToSpeech.OnInitListen
     private boolean accept = false;
     private LinearLayout emergency, setting;
 
-
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.d(TAG, "home resume called");
+        setButtonLook(MyProperties.getInstance().isLogged());
+    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -50,6 +55,11 @@ public class activity_home extends Activity implements TextToSpeech.OnInitListen
 
         MyProperties.getInstance().gtts = new TextToSpeech(getApplicationContext(), this);
 
+        // first time, no db exist, create one and load data from xml
+        if (MyProperties.getInstance().database == null) {
+            MyProperties.getInstance().database = new DatabaseHandler(this);
+        }
+
         // first animation in main
         ImageView image = (ImageView) findViewById(R.id.frame_home);
         image.setBackgroundResource(R.drawable.frame);
@@ -59,6 +69,9 @@ public class activity_home extends Activity implements TextToSpeech.OnInitListen
         para = (Button)findViewById(R.id.para);
         fixed = (Button)findViewById(R.id.fixed);
         tut = (Button)findViewById(R.id.tut);
+
+        // set button transparent according to login status
+        setButtonLook(MyProperties.getInstance().isLogged());
 
         emergency = (LinearLayout)findViewById(R.id.head_home3);
         setting = (LinearLayout)findViewById(R.id.head_home4);
@@ -95,11 +108,17 @@ public class activity_home extends Activity implements TextToSpeech.OnInitListen
                 } else if (count == CONSTANT.END) {
                     count = CONSTANT.START;
 
-                    MyProperties.getInstance().transitType = CONSTANT.PARA;
+                    if (! MyProperties.getInstance().isLogged()) {
+                        showLoginDialog();
 
-                    Intent intent = new Intent();
-                    intent.setClass(activity_home.this, activity_main.class);
-                    startActivity(intent);
+                    } else {
+
+                        MyProperties.getInstance().transitType = CONSTANT.PARA;
+
+                        Intent intent = new Intent();
+                        intent.setClass(activity_home.this, activity_main.class);
+                        startActivity(intent);
+                    }
                 }
             }
         });
@@ -121,11 +140,16 @@ public class activity_home extends Activity implements TextToSpeech.OnInitListen
                 } else if (count == CONSTANT.END) {
                     count = CONSTANT.START;
 
-                    MyProperties.getInstance().transitType = CONSTANT.FIXED;
+                    if (! MyProperties.getInstance().isLogged()) {
+                        showLoginDialog();
+                    } else {
 
-                    Intent intent = new Intent();
-                    intent.setClass(activity_home.this, activity_main.class);
-                    startActivity(intent);
+                        MyProperties.getInstance().transitType = CONSTANT.FIXED;
+
+                        Intent intent = new Intent();
+                        intent.setClass(activity_home.this, activity_main.class);
+                        startActivity(intent);
+                    }
                 }
             }
         });
@@ -186,15 +210,8 @@ public class activity_home extends Activity implements TextToSpeech.OnInitListen
         });
 
 
-
-        // first time, no db exist, create one and load data from xml
-        if (MyProperties.getInstance().database == null) {
-            MyProperties.getInstance().database = new DatabaseHandler(this);
-        }
-
-        DatabaseHandler database = MyProperties.getInstance().database;
-
-        addTimeStamp();
+//        DatabaseHandler database = MyProperties.getInstance().database;
+//        addTimeStamp();
 
         // *****************************************************************************************
         // *****************************************************************************************
@@ -350,6 +367,38 @@ public class activity_home extends Activity implements TextToSpeech.OnInitListen
 
     }
 
+    private void setButtonLook(boolean logged) {
+        if (logged) {
+            para.setAlpha(1.0f);
+            fixed.setAlpha(1.0f);
+
+        } else {
+            para.setAlpha(0.5f);
+            fixed.setAlpha(0.5f);
+        }
+    }
+
+    private void showLoginDialog() {
+        new AlertDialog.Builder(this)
+                .setTitle("Log in?")
+                .setMessage("You need to login to unlock this function!")
+                .setIcon(R.drawable.lock)
+//                .setCancelable(false)
+                .setPositiveButton(R.string.login, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                        Intent intent = new Intent();
+                        intent.setClass(activity_home.this, activity_setting.class);
+                        startActivity(intent);
+                    }
+
+
+                })
+                .setNegativeButton(R.string.cancel, null)
+                .show();
+    }
+
 
     @Override
     public void onBackPressed() {
@@ -369,7 +418,7 @@ public class activity_home extends Activity implements TextToSpeech.OnInitListen
 
     }
 
-    private void addTimeStamp() {
+/*    private void addTimeStamp() {
         Long timeSeconds = System.currentTimeMillis();
 
         String start = MyProperties.getInstance().database.getProp("startTime");
@@ -379,7 +428,7 @@ public class activity_home extends Activity implements TextToSpeech.OnInitListen
         } else if (Long.parseLong(start) == 0) {
             MyProperties.getInstance().database.updateProp("startTime", timeSeconds.toString());
         }
-    }
+    }*/
 
 
     private void fillMissingInformation(List<ItemStruct> itemsFromDatabase) {

@@ -386,4 +386,9 @@ public class MyProperties {
         GGlogin = status;
         database.updateProp("GGLogin", Boolean.toString(status));
     }
+
+    // return true if at least one logged
+    public boolean isLogged() {
+        return isFBLogged() || isGGLogged();
+    }
 }
