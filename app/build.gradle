@@ -2,14 +2,13 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 23
-    buildToolsVersion "24.0.0 rc3"
+    buildToolsVersion '23.0.3'
 
     defaultConfig {
-        applicationId "com.ttsproj.projectericlite"
         minSdkVersion 16
         targetSdkVersion 23
-        versionCode 3
-        versionName "1.3"
+        versionCode 6
+        versionName "1.6"
         multiDexEnabled true
     }
 
@@ -20,6 +19,7 @@ android {
             keyAlias "project_eric_lite"
             keyPassword "5221687app"
         }
+
     }
 
     buildTypes {
@@ -33,6 +33,17 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt')
             signingConfig signingConfigs.release
+        }
+    }
+
+    productFlavors {
+        demo {
+            applicationId "com.ttsproj.projectericlite"
+            versionName "1.6-demo"
+        }
+        full {
+            applicationId "com.ttsproj.projectericfull"
+            versionName "1.6-full"
         }
     }
 }

@@ -153,6 +153,10 @@ public class activity_cognitive extends Activity implements OnInitListener {
                 if (item.getChild() == null) {
                     MyProperties.getInstance().speakBoth(item);
 
+                    if (item.getSpecialTag() != null && item.getSpecialTag().equalsIgnoreCase("demo")) {
+                        return true;
+                    }
+
                     item.setFreq("cognitive", item.getFreq("cognitive") + 1);
                     MyProperties.getInstance().database.updateItem(MyProperties.getInstance().transitType, "cognitive", item);
                     Log.d(TAG, "count=" + item.getFreq("cognitive"));

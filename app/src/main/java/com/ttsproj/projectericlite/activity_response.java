@@ -6,6 +6,8 @@ import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
+import android.nfc.Tag;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.text.InputType;
@@ -68,6 +70,11 @@ public class activity_response extends Activity {
     }
 
     private void addInputItemInFront() {
+
+        // for demo version, no customized input will be added
+        if (BuildConfig.FLAVOR == "demo")
+            return;
+
         ItemStruct item = new ItemStruct(R.drawable.customize, "Input your text...");
         item.setImageString("customize");
         item.setSpecialTag("input");
@@ -114,7 +121,10 @@ public class activity_response extends Activity {
 
                         updateClickedItem(item);
 
-                    } else if (item.getSpecialTag().equalsIgnoreCase("input")) {
+                    } else if (item.getSpecialTag().equalsIgnoreCase("demo")) {
+                        MyProperties.getInstance().speakBoth(item);
+                    }
+                    else if (item.getSpecialTag().equalsIgnoreCase("input")) {
                         createNewItem();
                     }
 
@@ -221,7 +231,6 @@ public class activity_response extends Activity {
 
                 // add the first item, aleays
                 addInputItemInFront();
-
 
                 updateList(thisLevel);
             }

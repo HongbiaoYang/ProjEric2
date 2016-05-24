@@ -12,6 +12,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.*;
 
+import com.facebook.AccessToken;
+import com.facebook.AccessTokenTracker;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
@@ -105,6 +107,20 @@ public class activity_setting extends FragmentActivity implements GoogleApiClien
 
         callbackManager = CallbackManager.Factory.create();
 
+        final AccessTokenTracker accessTokenTracker = new AccessTokenTracker() {
+            @Override
+            protected void onCurrentAccessTokenChanged(AccessToken oldAccessToken, AccessToken currentAccessToken) {
+                if (currentAccessToken == null) {
+                    Log.d(TAG, "logout: current token = "+currentAccessToken);
+                    // facebook logout
+                    MyProperties.getInstance().updateFBLoginStatus(false);
+                    updateUI(false);
+                    Log.d(TAG, "fb logout");
+                }
+            }
+        };
+
+        // handle facebook login
         fbLogin.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
             @Override
             public void onSuccess(LoginResult loginResult) {
@@ -120,6 +136,9 @@ public class activity_setting extends FragmentActivity implements GoogleApiClien
                                     String email =  object.getString("email");
                                     String name = object.getString("name");
                                     sendDataToServer(name, email, "Facebook");
+
+                                    MyProperties.getInstance().updateFBLoginStatus(true);
+                                    accessTokenTracker.startTracking();
 
                                 } catch (JSONException e) {
                                     Log.d(TAG, "data read err:"+e.toString());
@@ -144,6 +163,9 @@ public class activity_setting extends FragmentActivity implements GoogleApiClien
 
             }
         });
+
+
+
 
         // Configure sign-in to request the user's ID, email address, and basic
         // profile. ID and basic profile are included in DEFAULT_SIGN_IN.
@@ -302,6 +324,7 @@ public class activity_setting extends FragmentActivity implements GoogleApiClien
         }
     } // [End of activity result ]
 
+    // handle google login
     private void handleSignInResult(GoogleSignInResult result) {
         Log.d(TAG, "handleSignInResult:" + result.isSuccess());
        /* if (result.isSuccess()) {

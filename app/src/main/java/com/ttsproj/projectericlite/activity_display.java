@@ -97,6 +97,10 @@ public class activity_display extends Activity implements OnInitListener {
                 if (item.getChild() == null) {
                     MyProperties.getInstance().speakBoth(item);
 
+                    if (item.getSpecialTag() != null && item.getSpecialTag().equalsIgnoreCase("demo")) {
+                        return false;
+                    }
+
                     String subMenu;
                     if (MyProperties.getInstance().Language == LANG.ENGLISH) {
                         subMenu = "hearing";
@@ -141,6 +145,9 @@ public class activity_display extends Activity implements OnInitListener {
                     ItemStruct item = thisLevel.get(position);
                     if (item.getChild() == null) {
                         MyProperties.getInstance().speakBoth(item);
+                        if (item.getSpecialTag() != null && item.getSpecialTag().equalsIgnoreCase("demo")) {
+                            return;
+                        }
 
                         String subMenu;
                         if (MyProperties.getInstance().Language == LANG.ENGLISH) {
